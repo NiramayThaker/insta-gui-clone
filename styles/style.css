@@ -1,0 +1,482 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* font-size: 10px; */
+
+    /* 10px / 16px = 0.625 = 62.5% */
+    /* Percentage of user's browser font-size setting */
+    font-size: 62.5%;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #F5F7F8;
+}
+
+/* .container {
+    height: 100rem;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 25rem 0.7fr 25rem;
+    grid-template-rows: 15rem 1fr;
+    position: relative;
+    column-gap: 2rem;
+    row-gap: 1rem;
+    justify-content: center;
+    padding: 1rem;
+} */
+
+.container {
+    width: 160rem;
+    height: 100rem;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 25rem 0.9fr 25rem;
+    grid-template-rows: 15rem 1fr;
+    position: relative;
+    column-gap: 2rem;
+    row-gap: 1rem;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/*****************************/
+/* NAVBAR SECTION  */
+/*****************************/
+
+.insta-logo {
+    height: 15rem;
+    width: 20rem;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+/* .main-nav {
+    height: 92rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
+    display: flex;  
+    flex-direction: column;
+    gap: 3rem;
+    position: fixed;
+    background-color: #fff;
+    border: 0.1rem solid #dad2d2;   
+} */
+
+.main-nav {
+    height: calc(100vh - 2rem); /* Adjust the height to fit within the viewport */
+    margin-top: 0; /* Aligns the navbar to the top of the viewport */
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;  
+    flex-direction: column;
+    gap: 3rem;
+    position: fixed; /* Fix the navbar */
+    top: 3rem; /* Offset from the top of the viewport */
+    left: 21rem; /* Offset from the left of the viewport */
+    z-index: 1000; /* Ensure the navbar is above other content */
+    background-color: #fff;
+    border: 0.1rem solid #dad2d2;
+    width: 25rem; /* Match the grid column width */
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.8rem;
+    align-items: center;
+}
+
+.first-ele {
+    margin-top: -10%;
+}
+
+.nav-links:last-child {
+    margin-top: auto;
+    margin-bottom: 1.5rem;
+}
+
+.nav-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    margin-left: 15%;
+}
+
+.nav-links:link,
+.nav-links:visited {
+    color: black;
+    text-decoration: none;
+    transition: all 0.3;
+}
+
+.nav-links:hover,
+.nav-links:active {
+    color: #6e6363;
+}
+
+/*****************************/
+/* STORY SECTION  */
+/*****************************/
+
+.story-section {
+    height: 12rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 2rem;
+    border: 0.1rem solid #dad2d2;
+    background-color: #fff;
+    border-radius: 1rem;
+    grid-column: 2;
+}
+
+.story {
+    background-color: #fff;
+    border: none;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.3;
+}
+
+.add-story {
+    background-color: aqua;
+    height: 0;
+    width: 5rem;
+    margin-top: 2%;
+    color: black;
+}
+.add-story:hover {
+    color: rgb(90, 83, 83);
+}
+
+.add-story-icon {
+    height: 7.5rem;
+    width: 7.5rem;
+    /* background-color: red; */
+}
+
+.story-img.seen-stories {
+    border: 0.2rem solid rgba(212, 16, 16, 0.418);
+}
+
+.story-img {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    border: 0.2rem solid rgb(219, 31, 31);
+    padding: 3px;
+}
+
+.story-img:hover {
+    border: 0.2rem solid rgba(219, 31, 31, 0.551);
+}
+
+.story-username {
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/*****************************/
+/* FEEDS SECTION  */
+/*****************************/
+
+.feeds {
+    /* background-color: blue; */
+    grid-row: 2;
+    background-color: #fff;
+    border: 0.1rem solid #dad2d2;
+    border-radius: 1rem;
+}
+
+.user-info-post {
+    display: flex;
+    /* gap: 2rem; */
+    margin-bottom: 2rem;
+    padding: 2rem 3rem;
+    padding-bottom: 0;
+    cursor: pointer;
+}
+
+.user-profile {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.4rem;
+    padding-left: 1rem;
+}
+
+.post-username {
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.user-post-location {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.more-info-dots {
+    margin-left: auto;
+    width: 2rem;
+    background-color: #fff;
+    border: none;
+    color: black;
+    font-size: 2.6rem;
+    cursor: pointer;
+    transition: all 0.3;
+}
+
+.post-username:hover,
+.user-post-location:hover,
+.more-info-dots:hover {
+    color: #6e6363;
+}
+
+.user-post {
+    height: 75vh;
+    width: 95%;
+    margin-left: 2.5%;
+}
+
+.feeds {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 5rem;
+    grid-row: span 2;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.post-cta {
+    /* background-color: red; */
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    gap: 1.5rem;
+    margin: 1rem 3rem;
+    align-items: center;
+}
+
+.cta-icons {
+    height: 3rem;
+    width: 3rem; 
+    cursor: pointer;
+    /* background-color: aqua;   */
+}
+
+.cta-icons:hover {
+    color: #6e6363;
+    stroke: #fff;
+    fill: #000;
+}
+
+.like-icon:hover {
+    fill: red;
+    stroke: #fff;
+}
+
+.save-icon {
+    margin-left: auto;
+}
+
+.share-icon {
+    transform: rotate(-30deg);
+    height: 2.6rem;
+}
+
+.post {
+    position: relative;
+}
+
+.tooltip {
+    display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 5rem;
+    background-color: #6e6363;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem 0;
+    border-radius: 0.5rem;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/*****************************/
+/* SUGGESTION SECTION  */
+/*****************************/
+
+/* .suggestion-section {
+    background-color: orange;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    height: 92rem;
+    grid-row: span 2;
+} */
+
+.suggestion-section {
+    height: calc(100vh - 2rem); /* Adjust the height to fit within the viewport */
+    margin-top: 0; /* Aligns the navbar to the top of the viewport */
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;  
+    flex-direction: column;
+    gap: 3rem;
+    position: fixed; /* Fix the navbar */
+    top: 3rem; /* Offset from the top of the viewport */
+    right: 21rem; /* Offset from the left of the viewport */
+    z-index: 1000; /* Ensure the navbar is above other content */
+    /* background-color: #fff; */
+    /* border: 0.1rem solid #dad2d2; */
+    width: 25rem; /* Match the grid column width */
+}
+
+.logged-user-profile-photo {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+}
+
+.curr-user-profile {
+    display: flex;
+    margin-top: 10%;
+    justify-content: left;
+}
+
+
+.logged-user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.logged-username {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.logged-user-fullname {
+    font-size: 1rem;
+}
+
+.logged-username:hover,
+.logged-user-fullname:hover {
+    color: #6e6363;
+}
+
+.view-profile:link,
+.view-profile:visited {
+    margin-top: 0.5rem;
+    text-decoration: none;
+    color: #4a0fd3;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.view-profile:active,
+.view-profile:hover {
+    color: #20055f;
+}
+
+
+
+.sugg {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sugg-profiles {
+    cursor: pointer;
+    display: grid;
+}
+
+.sugg-header {
+    font-size: 1.4rem;
+    color: #968f8f;
+    font-weight: bold;
+}
+
+.see-all-sugg {
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.see-all-sugg:hover {
+    color: #6e6363;
+}
+
+.sugg-profiles {
+    display: flex;
+}
+
+.sugg-username {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.sugg-username:hover {
+    color: #6e6363;
+}
+
+.sugg-user-fullname {
+    font-size: 1.2rem;
+    color: #6e6363;
+}
+
+.sugg-user-fullname:hover {
+    color: #000;
+}
+
+.sugg-user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 1rem;
+}
+
+.sugg-profile-img {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+}
+
+.follow-profile {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: #4a0fd3;
+    margin-left: auto;
+    margin-top: 5%;
+}
