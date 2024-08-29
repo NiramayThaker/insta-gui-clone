@@ -1,0 +1,103 @@
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 84em) {
+    .main-nav {
+        height: 120vh;
+    }
+    
+    .story-section {
+        /* gap: 7rem; */
+    }
+    
+    .story-username {
+        font-size: 1.4rem;
+    }
+    
+    .suggestion-section {
+        padding: 0;
+        top: 3rem;
+        margin-left: 5%;
+    }
+    
+    .logged-user-profile-photo {
+        height: 8rem;
+        width: 8rem;
+    }
+    
+    .logged-username {
+        font-size: 1.8rem;
+    }
+
+    .logged-user-fullname {
+        font-size: 1.4rem;
+    }
+    
+    .logged-user-info {
+        margin-left: 2rem;
+    }
+    
+    .view-profile:link,
+    .view-profile:visited {
+        font-size: 1.6rem;
+    }
+    
+    .sugg-header {
+        font-size: 1.6rem;
+    }
+    
+    .see-all-sugg {
+        font-size: 1.4rem;
+    }
+    
+    .sugg-profile-img {
+        height: 6rem;
+        width: 6rem;
+    }
+    
+    .sugg-username {
+        font-size: 1.6rem;
+    }
+
+    .sugg-user-fullname {
+        font-size: 1.5rem;
+    }
+    
+    .follow-profile {
+        font-size: 1.4rem;
+    }
+}
+
+
+/**************************/
+/* BELOW 1122px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 70em) {
+
+    .container {
+        padding: 2rem 5rem;
+        grid-template-columns: 1fr 0.3fr;
+        grid-template-rows: 18rem 1fr;
+    }
+
+    .main-nav {
+        height: 5rem;
+        width: 96%;
+        grid-column: -3;
+        position: absolute;
+        grid-row: -1;
+        flex-direction: row;
+    }
+
+    .story-section {
+        grid-row: 1;
+        grid-column: 1; 
+        height: 15rem;
+    }
+    
+    .feeds {
+        grid-column: 1;
+    }
+}

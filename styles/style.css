@@ -32,7 +32,7 @@ body {
 
 .container {
     width: 160rem;
-    height: 100rem;
+    /* height: 100rem; */
     margin: 0px auto;
     display: grid;
     grid-template-columns: 25rem 0.9fr 25rem;
@@ -55,36 +55,20 @@ body {
     cursor: pointer;
 }
 
-/* .main-nav {
-    height: 92rem;
-    margin-top: 2rem;
+.main-nav {
+    height: 95vh;
+    margin-top: 0;
     border-radius: 1rem;
     padding: 1rem;
-    grid-row: 1 / -1;
-    grid-column: 1 / 2;
     display: flex;  
     flex-direction: column;
     gap: 3rem;
-    position: fixed;
+    position: sticky;
+    z-index: 1000;
+    width: 25rem; 
     background-color: #fff;
     border: 0.1rem solid #dad2d2;   
-} */
-
-.main-nav {
-    height: calc(100vh - 2rem); /* Adjust the height to fit within the viewport */
-    margin-top: 0; /* Aligns the navbar to the top of the viewport */
-    border-radius: 1rem;
-    padding: 1rem;
-    display: flex;  
-    flex-direction: column;
-    gap: 3rem;
-    position: fixed; /* Fix the navbar */
-    top: 3rem; /* Offset from the top of the viewport */
-    left: 21rem; /* Offset from the left of the viewport */
-    z-index: 1000; /* Ensure the navbar is above other content */
-    background-color: #fff;
-    border: 0.1rem solid #dad2d2;
-    width: 25rem; /* Match the grid column width */
+    top: 3rem;
 }
 
 .nav-links {
@@ -126,9 +110,9 @@ body {
 /*****************************/
 
 .story-section {
-    height: 12rem;
+    height: 13rem;
     display: flex;
-    gap: 2rem;
+    gap: 5rem;
     justify-content: space-between;
     flex-direction: row;
     margin-top: 2rem;
@@ -136,12 +120,14 @@ body {
     background-color: #fff;
     border-radius: 1rem;
     grid-column: 2;
+    overflow-x: scroll;
+    scrollbar-width: thin;
+    padding: 1rem;
 }
 
 .story {
     background-color: #fff;
     border: none;
-    margin: 0 auto;
     cursor: pointer;
     transition: all 0.3;
 }
@@ -153,6 +139,7 @@ body {
     margin-top: 2%;
     color: black;
 }
+
 .add-story:hover {
     color: rgb(90, 83, 83);
 }
@@ -180,8 +167,9 @@ body {
 }
 
 .story-username {
+    width: 100%;
     margin-top: 0.5rem;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
@@ -195,6 +183,7 @@ body {
     background-color: #fff;
     border: 0.1rem solid #dad2d2;
     border-radius: 1rem;
+    z-index: 9999;
 }
 
 .user-info-post {
@@ -249,7 +238,7 @@ body {
 }
 
 .user-post {
-    height: 75vh;
+    height: 90rem;
     width: 95%;
     margin-left: 2.5%;
 }
@@ -264,13 +253,18 @@ body {
     grid-row: 2;
 }
 
+.main-post-section {
+    /* height: 85rem; */
+    width: auto;
+}
+
 .post-cta {
     /* background-color: red; */
     text-decoration: none;
     color: #000;
     display: flex;
     gap: 1.5rem;
-    margin: 1rem 3rem;
+    margin: 1.5rem 3rem;
     align-items: center;
 }
 
@@ -334,29 +328,18 @@ body {
 /* SUGGESTION SECTION  */
 /*****************************/
 
-/* .suggestion-section {
-    background-color: orange;
-    margin-top: 2rem;
-    border-radius: 1rem;
-    height: 92rem;
-    grid-row: span 2;
-} */
-
 .suggestion-section {
-    height: calc(100vh - 2rem); /* Adjust the height to fit within the viewport */
-    margin-top: 0; /* Aligns the navbar to the top of the viewport */
+    /* height: 92rem; */
+    margin-top: 0;
     border-radius: 1rem;
     padding: 1rem;
     display: flex;  
     flex-direction: column;
     gap: 3rem;
-    position: fixed; /* Fix the navbar */
-    top: 3rem; /* Offset from the top of the viewport */
-    right: 21rem; /* Offset from the left of the viewport */
-    z-index: 1000; /* Ensure the navbar is above other content */
-    /* background-color: #fff; */
-    /* border: 0.1rem solid #dad2d2; */
-    width: 25rem; /* Match the grid column width */
+    position: sticky;
+    z-index: 1000;
+    width: 25rem;
+    top: 2rem;
 }
 
 .logged-user-profile-photo {
@@ -369,8 +352,7 @@ body {
     display: flex;
     margin-top: 10%;
     justify-content: left;
-}
-
+}   
 
 .logged-user-info {
     display: flex;
@@ -385,8 +367,9 @@ body {
     font-size: 1.4rem;
     font-weight: bold;
 }
+
 .logged-user-fullname {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .logged-username:hover,
@@ -399,7 +382,7 @@ body {
     margin-top: 0.5rem;
     text-decoration: none;
     color: #4a0fd3;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bold;
 }
 
@@ -407,8 +390,6 @@ body {
 .view-profile:hover {
     color: #20055f;
 }
-
-
 
 .sugg {
     display: flex;
@@ -438,6 +419,9 @@ body {
 
 .sugg-profiles {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
 .sugg-username {
@@ -473,10 +457,10 @@ body {
 
 .follow-profile {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: bold;
-    letter-spacing: 0.5px;
     color: #4a0fd3;
     margin-left: auto;
-    margin-top: 5%;
+    margin-top: 4%;
+
 }
