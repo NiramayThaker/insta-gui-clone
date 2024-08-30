@@ -7,10 +7,6 @@
         height: 120vh;
     }
     
-    .story-section {
-        /* gap: 7rem; */
-    }
-    
     .story-username {
         font-size: 1.4rem;
     }
@@ -79,25 +75,319 @@
     .container {
         padding: 2rem 5rem;
         grid-template-columns: 1fr 0.3fr;
-        grid-template-rows: 18rem 1fr;
+        grid-template-rows: 8rem 20rem 1fr;
     }
 
     .main-nav {
-        height: 5rem;
-        width: 96%;
-        grid-column: -3;
-        position: absolute;
-        grid-row: -1;
+        margin-top: 0;
+        height: 10rem;
+        width: 100%;
+        grid-column: 1;
+        grid-row: 1;
+        z-index: 99999;
         flex-direction: row;
+        top: 0;
+
+        /* justify-content: center;
+        align-items: center; */
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .insta-logo {
+        position: absolute;
+        top: -4rem;
+        width: 35rem;
+        height: 20rem;
+    }
+
+    .first-ele,
+    .nav-links:last-child {
+        margin: 0;
     }
 
     .story-section {
-        grid-row: 1;
+        grid-row: 2;
         grid-column: 1; 
         height: 15rem;
+    }
+
+    .nav-ele {
+        height: 8rem;
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: 2rem;
+        align-items: center;
+        gap: 5rem;
+        color: black;
+    }
+
+    .nav-icon {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .nav-icon:hover {
+        fill: black;
+    }
+
+    .nav-names {
+        display: none;
     }
     
     .feeds {
         grid-column: 1;
+        grid-row: 3;
+    }
+
+    .more-info-dots {
+        font-size: 3.2rem;
+        margin-right: 2%;
+    }
+
+    .story-section {
+        height: 18rem;
+        gap: 7rem;
+    }
+
+    .add-story-icon {
+        height: 9.5rem;
+        width: 9.5rem;
+        margin: 1rem 2rem;
+    }
+
+    .story:nth-child(2) {
+        margin-left: 4rem;
+    }
+
+    .story-img {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .story-username {
+        font-size: 1.7rem;
+    }
+
+    .user-profile {
+        height: 6rem;
+        width: 6rem;
+    }
+
+    .user-info {
+        gap: 1rem;
+        padding-left: 2rem;
+    }
+
+    .user-post-location {
+        font-size: 1.9rem;
+    }
+
+    .post-username {
+        font-size: 2.2rem;
+    }
+
+    .cta-icons {
+        height: 4rem;
+        width: 4rem; 
+    }
+
+
+    .logged-user-info {
+        gap: 1rem;
+    }
+
+    .logged-user-profile-photo {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .logged-username {
+        font-size: 2.4rem;
+    }
+
+    .logged-user-fullname {
+        font-size: 1.8rem;
+    }
+
+    .view-profile:link,
+    .view-profile:visited {
+        font-size: 1.8rem;
+    }
+
+    .suggestion-section {
+        width: 32rem;
+        padding: 1rem;
+    }
+
+    .sugg-profile-img {
+        height: 7rem;
+        width: 7rem;
+    }
+
+    .sugg-username {
+        font-size: 2em;
+    }
+
+    .sugg-user-fullname {
+        font-size: 1.6rem;
+    }
+
+    .follow-profile {
+        letter-spacing: none;
+        font-size: 1.6rem;
+    }
+
+    .sugg-header {
+        font-size: 2.1rem;
+    }
+
+    .see-all-sugg {
+        font-size: 1.8rem;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: hidden;
+    }
+}
+
+
+@media (max-width: 27em) {
+    body {
+        padding: 5rem;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 12rem 30rem 1fr;
+        background-color: #fff;
+        row-gap: 5rem;
+    }
+
+    .suggestion-section,
+    .insta-logo {
+        display: none;
+    }    
+        
+    .main-nav {
+        height: 20rem;
+        width: 95%;
+        margin: 0 4rem;
+        position: absolute;
+        top: 95%;
+        z-index: 999999;
+        position: sticky;
+    }
+    
+    .nav-ele {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 2rem 2rem;
+        gap: 25rem;
+    }
+
+    .nav-icon {
+        height: 10rem;
+        width: auto;
+    }
+
+    .mobile-nav {
+        grid-row: 1;
+        grid-column: -2;
+        padding: 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+        position: sticky;
+        z-index: 999999;
+        top: 0;
+        background-color: #fff;
+    }
+
+    .mobile-nav-icn  {
+        height: 8rem;
+        width: auto;
+    }
+
+    .mobile-insta-logo{
+        width: 45rem;
+        height: auto;
+    }
+
+    .dm-icon {
+        transform: rotate(-30deg);
+    }
+
+    .story-section {
+        grid-row: 2;
+        height: 28rem;
+        border: none;
+        gap: 12rem;
+    }
+
+    .add-story {
+        margin-right: 7rem;
+    }
+
+    .add-story-icon {
+        height: 18rem;
+        width: 18rem;
+    }
+
+    .story-img,
+    .logged-user-mobile {
+        height: 19rem;
+        width: 19rem;
+    }
+
+    .story-username {
+        font-size: 3.2rem;
+    }
+
+    .feeds {
+        grid-row: 3;
+    }
+
+    .user-profile {
+        height: 10rem;
+        width: auto;
+        margin-left: 2%;
+    }
+
+    .user-info {
+        margin-left: 1%;
+    }
+
+    .post-username {
+        font-size: 4.0rem;
+    }
+
+    .user-post-location {
+        font-size: 3.8rem;
+    }
+
+    .more-info-dots {
+        font-size: 6.8rem;
+        margin-right: 5%;
+        margin-bottom: 3%;
+    }
+
+    .user-post {
+        height: 170rem;
+    }
+
+    .cta-icons {
+        height: 8rem;
+        width: 8rem;
+        margin-left: 2rem;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: hidden;
     }
 }

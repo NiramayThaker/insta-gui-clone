@@ -17,6 +17,15 @@ body {
     background-color: #F5F7F8;
 }
 
+.mobile-nav, 
+.logged-user-mobile {
+    display: none;
+}
+
+.res-main-nav {
+    display: none;
+}
+
 /* .container {
     height: 100rem;
     margin: 0px auto;
@@ -71,6 +80,14 @@ body {
     top: 3rem;
 }
 
+
+.nav-ele {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 90vh;
+}
+
 .nav-links {
     display: flex;
     gap: 1rem;
@@ -82,7 +99,7 @@ body {
     margin-top: -10%;
 }
 
-.nav-links:last-child {
+.last-ele {
     margin-top: auto;
     margin-bottom: 1.5rem;
 }
